@@ -1,0 +1,67 @@
+1. New Class - Player()
+
+2. Instantiate player object in Game
+[ classes, objects, attributes ] 
+	1. add sprite // astro.sprite = sprite('img.png')
+	2. astro.x and astro.y 
+3. create 3 classes and add sprites.
+	-BG			
+	-Floor
+	- FlyingEnemy
+
+4. Create objects of previous classes
+	- forest = BG() and forest.sprite
+	- floor1 = Floor() and floor.sprite
+	- floor2 
+	- bat (flying object)
+	- MOVE AROUND OBJECTS PROPERLY 
+
+5. Go to game loop to make bat move
+	[ introduce self.bat, iteration +=  ] 
+	- self.bat.x += 1 
+
+---------------------------------------------------------------------- # LESSON 3
+
+
+6. USER INPUT 
+[ conditions to see if user is pressing ] 
+	if key_was_pressed(' '):
+		print("Jump !")
+
+7. make player move left and right
+	if key_is_pressed('d'):
+		self.x += 1
+
+____________________________________________________________________
+# LESSON 4 
+[ adding game physics ] 
+
+1. self.y -= 2  (still in player loop)
+
+2. [ collision ]
+	if get_collision(self, 'Floor'):
+	    	self.y += 2  
+
+3. [ jump ] 
+- declare variables 
+add on player class
+self.onGround = False
+self.jumpTimer = 0 
+
+on player loop
+self.onGround = True 
+
+[jump conditions // nested for loop ]
+
+if key_was_pressed(' '):
+    if self.onGround == True:	# and we're not on the ground
+        self.jumpTimer = 30
+        self.onGround = False
+
+
+2nd set of conditions
+
+self.jumpTimer -= 1 
+
+if self.jumpTimer > 0:
+    self.y += 5

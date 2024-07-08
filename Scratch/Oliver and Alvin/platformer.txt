@@ -1,0 +1,48 @@
+1. resize sprite and initialize when clicked 
+
+2. create floor by creating a new sprite and filling it with a color 
+	- 1 box for soil
+	- 1 smaller box for grass
+	- set location x: 0 y: 0 
+	- add sky backdrop
+
+3. player movement  & collision 
+	- rename player and background 
+
+	- ** Forever loop and declare  
+		Create block // up down movement with 2 arguements : height and fall speed. 
+
+	- add functionality to the fall function 
+
+4. JUMP [7:00 start]
+	- new if else 
+	- if not() and key up pressed 
+		jump
+	else	
+		dont jump
+
+	- set jump to 10
+
+5.  LEFT RIGHT [8:58 ] 
+
+	CREATE NEW block left/right with 2 arguments speed and drag
+
+	- copy paste jump logic
+	- create an x=speed variable 
+	- we want x to change not y so we
+		1. change by x-speed (under define)
+		2. repeat ceiling of abs of x-speed
+		3. remove if else that checks for jump
+		4. change to just an if 
+		5. set x-speed to 0 
+	
+		MOVE LEFT OR RIGHT 
+		6. add if else
+		if(right){
+			point front
+		}
+		else{
+			if(left){
+			point left}
+		}
+	
